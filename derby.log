@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri May 09 13:35:13 ART 2014:
+ Iniciando instancia a816c00e-0145-e1d6-a9c5-000002022858 de Derby, versión The Apache Software Foundation - Apache Derby - 10.10.1.2 - (1495037): 
+en el directorio de base de datos C:\Users\AlanSandoval\Documents\NetBeansProjects\Aeropuerto2\Aero con el cargador de clases sun.misc.Launcher$AppClassLoader@66d3c617
+Cargado desde file:/C:/Program%20Files/Java/jdk1.8.0/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0-b132
+user.dir=C:\Users\AlanSandoval\Documents\NetBeansProjects\Aeropuerto2
+os.name=Windows 8
+os.arch=amd64
+os.version=6.2
+derby.system.home=null
+Cargador de clases de base de datos iniciado - derby.database.classpath=''
