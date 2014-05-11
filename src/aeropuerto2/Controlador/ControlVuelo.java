@@ -1,5 +1,6 @@
 package aeropuerto2.Controlador;
 import aeropuerto2.GestorEntidades;
+import aeropuerto2.Modelo.Airport;
 import aeropuerto2.Modelo.Vuelo;
 import java.util.List;
 import javax.persistence.EntityTransaction;
@@ -25,8 +26,6 @@ public class ControlVuelo {
             this.ge.getEt().commit();
         } catch (Exception e) {
             System.out.println("Error al agregar: " + e.getLocalizedMessage());
-        }finally{
-            this.ge.getEm().close();
         }
     }
 
@@ -70,5 +69,19 @@ public class ControlVuelo {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }   
-    }        
+    }    
+    
+    public List<Vuelo> BuscarVueloPorOrigen(long entrada,long salida)    {   
+        
+        Query query= this.ge.getEm().createQuery("Select v from Vuelo v where v.arribo.id="+entrada+" and v.salida.id="+salida); 
+        //Query query= this.ge.getEm().createQuery("Select v from Vuelo v");// where v.arribo.id.="+Long.parseLong(entrada)+" and v.salida.id="+Long.parseLong(salida)); 
+        List<Vuelo>aeros=query.getResultList();
+        for(Vuelo item:aeros)
+        {
+            System.out.println(item.toString());
+            
+        }
+        System.out.println("Cantidad de Vuelos: "+aeros.size());
+        return aeros;
+    }
 }

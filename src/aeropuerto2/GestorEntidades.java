@@ -14,6 +14,8 @@ import javax.persistence.Persistence;
  *
  * @author AlanSandoval
  */
+
+//PATRON SINGLETON?
 public class GestorEntidades {
 
     EntityManagerFactory emf = null;
@@ -29,9 +31,8 @@ public class GestorEntidades {
     }
 
     public static synchronized GestorEntidades GetInstance() {
-        if (ge == null) {
-            ge = new GestorEntidades();
-            return ge;
+        if (ge == null) {             
+            return ge= new GestorEntidades();
         } else {
             return ge;
         }

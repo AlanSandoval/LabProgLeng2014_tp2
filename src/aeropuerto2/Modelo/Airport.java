@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package aeropuerto2.Modelo;
+package aeropuerto2.Modelo; 
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -107,7 +107,7 @@ public class Airport implements Serializable {
 
     @Override
     public String toString() {
-        return "aeropuerto2.Modelo.Airport[ id=" + id + " ]";
+        return ciudad+" "+codigo;
     }
     
 }

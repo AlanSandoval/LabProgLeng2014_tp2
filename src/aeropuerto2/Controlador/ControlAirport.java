@@ -37,8 +37,6 @@ public class ControlAirport {
             this.ge.getEt().commit();
         } catch (Exception e) {
             System.out.println("Error: " + e.getLocalizedMessage());
-        }finally{
-            this.ge.getEm().close();
         }
     }
     
@@ -62,8 +60,16 @@ public class ControlAirport {
     public List<Airport> ListarAirport() {
         Query query = this.ge.getEm().createQuery("Select a from Airport a");
         List<Airport>aeropuertos = query.getResultList();
+        for(Airport item:aeropuertos)
+        {
+            System.out.println("Aeropuerto: "+item.getId()+" "+item.getCiudad());
+        }
         return aeropuertos;
     }
+    
+    
+    
+    
     
     public Airport BuscarAirport(Long id)
     {

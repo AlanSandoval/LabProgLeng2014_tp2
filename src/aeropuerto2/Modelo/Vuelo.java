@@ -108,7 +108,7 @@ public class Vuelo implements Serializable {
 
     @Override
     public String toString() {
-        return this.nombreVuelo+id+precio;
+        return this.id+this.nombreVuelo+precio;
     }
     
 }
